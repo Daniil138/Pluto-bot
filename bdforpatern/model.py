@@ -1,6 +1,6 @@
 from reference import reference
 from exceptions import exception_proxy, argument_exception, operation_exception
-
+#ggg
 class basket_model(reference):
     __goods_id: list # айдишников на товары
 
