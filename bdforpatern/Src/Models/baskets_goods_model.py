@@ -1,13 +1,14 @@
+import uuid
 from reference import reference
 from exceptions import exception_proxy, argument_exception, operation_exception
 
 class basket_goods(reference):
-    basket_id:int
-    good_id:int
+    basket_id:uuid
+    good_id:uuid
     good_count:int
     def __init__(self,
-                 basket_id:int =None,
-                 good_id:int = None,
+                 basket_id:uuid =None,
+                 good_id:uuid = None,
                  good_count:int = None):
 
         super().__init__()
@@ -18,23 +19,23 @@ class basket_goods(reference):
         if basket_id != None:
             self.basket_id
     @property
-    def basket_id(self) ->int:
+    def basket_id(self) ->uuid:
         return self.__basket_id
     
 
     @basket_id.setter
-    def basket_id(self,value:int):
-        exception_proxy.validate(value,int)
+    def basket_id(self,value:uuid):
+        exception_proxy.validate(value,uuid)
         self.__basket_id = value
         
     @property
-    def good_id(self) ->int:
+    def good_id(self) ->uuid:
         return self.__good_id
     
 
     @good_id.setter
-    def good_id(self,value:int):
-        exception_proxy.validate(value,int)
+    def good_id(self,value:uuid):
+        exception_proxy.validate(value,uuid)
         self.__good_id = value
 
     @property

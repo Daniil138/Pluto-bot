@@ -1,8 +1,9 @@
+import uuid 
 from reference import reference
 from exceptions import exception_proxy, argument_exception, operation_exception
 
 class activities(reference):
-    user_id:int
+    user_id:uuid
     orders_count:int
     bot_activities:int
     def __init__(self,user_id:int = None,orders_count:int = None,bot_activities:int = None):
@@ -15,12 +16,12 @@ class activities(reference):
         if bot_activities != None:
             self.bot_activities = bot_activities
     @property
-    def user_id(self) ->int:
+    def user_id(self) ->uuid:
         return self.__user_id
     
 
     @user_id.setter
-    def user_id(self,value:int):
+    def user_id(self,value:uuid):
         exception_proxy.validate(value,int)
         self.__user_id = value
 
