@@ -1,8 +1,8 @@
-from Src.Logics.basic_convertor import basic_convertor
-from Src.Logics.datetime_convertor import datetime_convertor
+from basic_convertor import basic_convertor
+from datetime_convertor import datetime_convertor
 from Src.exceptions import exception_proxy, operation_exception, argument_exception
 from Src.reference import reference
-from Src.Logics.convertor import convertor
+from convertor import convertor
 
 
 import datetime
