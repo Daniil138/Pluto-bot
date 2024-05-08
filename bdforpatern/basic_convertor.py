@@ -1,4 +1,4 @@
-from Src.Logics.convertor import convertor
+from convertor import convertor
 
 #
 # Конвертор простых значений в словарь
