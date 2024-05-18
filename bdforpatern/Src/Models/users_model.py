@@ -7,6 +7,7 @@ class users(reference):
     __phone:int
     __post_index:int
     __user_inviter:uuid
+    
     def __init__(self,
                  name:str=None,
                  address:str =None,phone:int = None,
